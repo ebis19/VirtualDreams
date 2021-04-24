@@ -19,7 +19,7 @@ app.post('/', function (req, res) {
   }
   try {
     res.status('201').send();
-    //sendData(req.body);
+    sendData(req.body);
     console.log(req.body)
   } catch (error) {
     res.status('500').send();

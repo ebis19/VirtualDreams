@@ -19,7 +19,7 @@ app.post('/', function (req, res) {
   }
   try {
     res.status('201').send();
-    sendData(req.body);
+    //sendData(req.body);
     console.log(req.body)
   } catch (error) {
     res.status('500').send();
@@ -30,21 +30,28 @@ app.listen(port, () => {
   console.log(`Virtual Dreams listening at http://localhost:${port}`)
 })
 
-
-
 function validate(body) {
   const test = (elemento) => ['dni','nombre','apellido'].includes(elemento);
-  if (body.dni === undefined || body.dni === '' || body.dni === null) {
+  if (body.dni === undefined || body.dni === null) {
     return 'El dni no fue definido'
   }
-  if (String(body.dni).length > 10 || Number(body.dni) === null) {
+  if(typeof body.dni !== 'number'){
+    return 'El dni debe ser un numero'
+  }
+  if (String(body.dni).length > 10) {
     return 'El dni debe ser un  numero de menos de caracteres';
   }
   if (body.apellido === undefined || body.apellido === '' || body.apellido === null) {
     return 'El apellido no fue definido';
   }
+  if(!(typeof body.apellido) === 'string'){
+    return 'El apellido debe ser un string'
+  }
+  if(body.nombre != undefined && typeof body.nombre !== 'string') {
+      return 'el nombre debe ser un string'
+  }
   if (!Object.keys(body).every(test)) {
-    return 'Solo ingresar Nombre, Dni, Apellido';
+    return 'Solo ingresar nombre, dni, apellido';
   }
   return 'OK';
 }

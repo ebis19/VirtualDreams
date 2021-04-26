@@ -1,5 +1,23 @@
 # VirtualDreams
 
+instalar dependencias
+```bash
+ npm install
+```
+
+## Ejercicio 4
+
+ Iniciar script: 
+```bash
+ nodejs mostrarPersonas.js
+``` 
+
+## Ejercicio 5
+
+```bash
+ npm start
+```
+
 ## Preguntas
 
 1. ¿Qué es un servidor HTTP?
@@ -55,9 +73,9 @@
 
  ```json
  {
-   'dni':'123456'
-   'apellido':'apellido'
-   'nombre':'nombre'
+   "dni":"123456"
+   "apellido":"apellido"
+   "nombre":"nombre"
  }
 ```
 
@@ -72,4 +90,9 @@
  }]
  ```
 
-9. 
+9. El estandar soap define procesos para el intercambio de informacion en los protocolos http,smtp, a travez de estruras de datos xml.
+10. El estandar
+11. los headers es utilizado en request para brindar mas informacion como datos del navegador y sistema operativo con header User-Agent.Ej
+    User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0.
+    el header Content-type es utilizado para indicar el mime type de los datos que se va enviar
+    mejor dicho que tipo de recurso es ya sea texto plano(text/plain), un json(application/json; charset=utf-8), sonido (audio/mpeg),image, etc.

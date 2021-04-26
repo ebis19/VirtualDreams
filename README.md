@@ -24,16 +24,7 @@
  En el rango entre 200 y 299 que indica que se ejecuto la respuesta satisfactoriamente.Ej 200 que informa que el request se ejecuto    correctamente. Y el 201 que informa que se guardo un nuevo dato.
  En el rango entre 400 y 499 que indican un error en el cliente. Como el clásico error 403 donde no encuentra la acción indicada .
  En el rango 500 y 599  indica  un  error un error en el servidor. como por ejemplo el codigo 500.
-6. La forma que  se envia los datos en el get es a traves del la url.Como por ejemplo <http://localhost/persona/dni/12345678> .En un post se indican los datos en la solicitud. Por ejemplo en el siguiente json:
-   
-   ```json
-
-  {
-  'mail': 'ejemplo@gmail.com',
-  'password' : '123456'
-  }
-  ```
-
+6. La forma que  se envia los datos en el get es a traves del la url.Como por ejemplo <http://localhost/persona/dni/12345678> .En un post se indican los datos en la solicitud. Normalmente se utilza get para solicitud de algun recurso  y el post para el envio de formulario.
 7. El verbo utilizado es por el navegador es GET.
 8. Las estructuras de datos xml y json son estandares para el intercambio de informacion entre applicaciones.
    El primero Extensible Markup Language funciona a travez de etiquetas es decir una manera similar a html.

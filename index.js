@@ -13,16 +13,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', function (req, res) {
-  const validacion = validate(req.body);
   try {
-    if (validacion != 'OK') {
+    if (validate(req.body)!= 'OK') {
     res.status('400').json({msg: validacion});
-    console.log(req.body)
     return;
     }
-    res.status('201').json({msg: validacion});
-    sendData(req.body);
-    console.log(req.body)
+    res.status('201');
+    sendData(req,res);
   }
   catch (error) {
     res.status('500').send();
@@ -59,22 +56,16 @@ function validate(body) {
   return 'OK';
 }
 
-function sendData(persona) {
+function sendData(req,res) {
   var options = {
     method: 'POST',
     uri: 'https://reclutamiento-14cf7.firebaseio.com/personas.json',
     json: true,
-    body: {
-      persona
-    }
+    body: req.body
   };
-  rp(options)
-    .then(function (id) {
-      console.log("Se envio el dato");
-    })
-    .catch(function (err) {
-      console.log('hubo un error con los resultados');
-    });
-
+  rp(options).then(
+    function (bodyResponse) {
+      res.json(bodyResponse)
+  }
+  )
 }
-

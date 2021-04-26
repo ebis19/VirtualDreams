@@ -1,16 +1,18 @@
 # VirtualDreams
 
-instalar dependencias
+Instalar dependencias
+
 ```bash
  npm install
 ```
 
 ## Ejercicio 4
 
- Iniciar script: 
+ Iniciar script:
+
 ```bash
  nodejs mostrarPersonas.js
-``` 
+```
 
 ## Ejercicio 5
 
@@ -91,7 +93,29 @@ instalar dependencias
  ```
 
 9. El estandar soap define procesos para el intercambio de informacion en los protocolos http,smtp, a travez de estruras de datos xml.
-10. El estandar rest o Representational state transfer se define como arquitectura al igual que la anterior donde indica cómo realizar el intercambio y manejo de datos a través de servicios. pero en este caso solo con el protocolo http. En este arquitectura  por lo que se utiliza las acciones en se utilizan los diferentes verbos http, get(opbtener), put(actualizar),post(agregar),delete(eliminar). y los uri para identificar los recursos usado normalmente sustantivos.
-11. los headers es utilizado en request para brindar mas informacion como datos del navegador y sistema operativo con header User-Agent.Ej
+
+10. El estandar rest o Representational state transfer se define como arquitectura al igual que la anterior donde indica cómo realizar el intercambio y manejo de datos a través de servicios. pero en este caso solo con el protocolo http. En este arquitectura se utiliza las diferentes verbos http, get(opbtener), put(actualizar),post(agregar),delete(eliminar) para las acciones. y los uri para identificar los recursos usando normalmente sustantivos.  Por ejemplo :
+Request : obtiene un alumno
+cliente -> get /alumno/{dni} ->  servidor
+response(respuesta del servidor)
+{
+  dni:1235456,
+  nombre:...,
+  apellido:...,
+  carrera:...,
+}
+Request guarda un alumno
+cliente -> post /alumno/{dni} ->  servidor
+{
+  dni:1235456,
+  nombre:...,
+  apellido:...,
+  carrera:...,
+}
+response(respuesta del servidor).
+{
+ "msg" : "se creo satifactoriamente"
+}
+1.  los headers es utilizado en request para brindar mas informacion como datos del navegador y sistema operativo con header User-Agent.Ej
 User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0.
 el header Content-type es utilizado para indicar el mime type de los datos que se va enviar mejor dicho que tipo de recurso es ya sea texto plano(text/plain), un json(application/json; charset=utf-8), sonido (audio/mpeg),image, etc.

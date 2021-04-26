@@ -1,7 +1,7 @@
 
 const express = require('express')
-var cors = require('cors');
-var rp = require('request-promise');
+const cors = require('cors');
+const rp = require('request-promise');
 const app = express()
 const port = 3000
 
@@ -14,16 +14,17 @@ app.get('/', (req, res) => {
 
 app.post('/', function (req, res) {
   const validacion = validate(req.body);
-  if (validacion != 'OK') {
-    res.status('400').json({msg: validacion});// TODO cambiar a mensaje json
+  try {
+    if (validacion != 'OK') {
+    res.status('400').json({msg: validacion});
     console.log(req.body)
     return;
-  }
-  try {
+    }
     res.status('201').json({msg: validacion});
     sendData(req.body);
     console.log(req.body)
-  } catch (error) {
+  }
+  catch (error) {
     res.status('500').send();
   }
 });
@@ -49,7 +50,7 @@ function validate(body) {
   if(typeof body.apellido !== 'string'){
     return 'El apellido debe ser un string'
   }
-  if(body.nombre != undefined &&typeof body.nombre !== 'string' || body.nombre === null) {
+  if(body.nombre != undefined && typeof body.nombre !== 'string' || body.nombre === null) {
       return 'el nombre debe ser un string'
   }
   if (!Object.keys(body).every(test)) {

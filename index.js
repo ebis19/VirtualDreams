@@ -38,7 +38,7 @@ function validate(body) {
   if (body.dni === undefined || body.dni === null) {
     return 'El dni no fue definido'
   }
-  if(typeof body.dni === 'number'){
+  if(typeof body.dni !== 'number'){
     return 'El dni debe ser un numero'
   }
   if (String(body.dni).length > 10) {

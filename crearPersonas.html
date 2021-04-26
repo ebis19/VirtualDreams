@@ -6,20 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<script>
+function send()
+ {
+    var http = new XMLHttpRequest();
+    var url = "http://localhost:3000/";
+    var dni = document.getElementById('dni').value;
+    var nombre = document.getElementById('nombre').value;
+    var apellido = document.getElementById('apellido').value;
+    http.open("POST", url, true);
+    http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    http.onreadystatechange = function() {
+        if (http.readyState === XMLHttpRequest.DONE){
+         alert(http.responseText)
+        }
+    }
+    alert(dni)
+    http.send(JSON.stringify({dni: Number(dni),nombre: nombre, apellido:apellido}));
+}
+</script>
+
 <body>
-    <form action="http://localhost:3000/" method="post">
         <p>
             <label>Dni</label>
-            <input type="text" id="dni" name="dni">
+            <input type="number" id="dni" name="dni">
         </p>
         <p>
             <label>Nombre</label>
-            <input type="text" id="nombre" name="apellido">
+            <input type="text"  id="nombre" name="apellido">
         </p>
         <p> <label>Apellido</label>
             <input type="text" id="apellido" name="nombre">
-            <button type="submit">Envíe su mensaje</button>
         </p>
-    </form>
+        <button onclick="send()" ></button>
+
 </body>
 </html>

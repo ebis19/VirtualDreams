@@ -1,25 +1,27 @@
 
 const express = require('express')
+var cors = require('cors');
 var rp = require('request-promise');
 const app = express()
 const port = 3000
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.json({msg:'Hello Virtual Dreams'})
 })
 
 app.post('/', function (req, res) {
   const validacion = validate(req.body);
   if (validacion != 'OK') {
-    res.status('400').send(validacion);// TODO cambiar a mensaje json
+    res.status('400').json({msg: validacion});// TODO cambiar a mensaje json
+    console.log(req.body)
     return;
   }
   try {
-    res.status('201').send();
-    //sendData(req.body);
+    res.status('201').json({msg: validacion});
+    sendData(req.body);
     console.log(req.body)
   } catch (error) {
     res.status('500').send();
@@ -35,7 +37,7 @@ function validate(body) {
   if (body.dni === undefined || body.dni === null) {
     return 'El dni no fue definido'
   }
-  if(typeof body.dni !== 'number'){
+  if(typeof body.dni === 'number'){
     return 'El dni debe ser un numero'
   }
   if (String(body.dni).length > 10) {
@@ -44,10 +46,10 @@ function validate(body) {
   if (body.apellido === undefined || body.apellido === '' || body.apellido === null) {
     return 'El apellido no fue definido';
   }
-  if(!(typeof body.apellido) === 'string'){
+  if(typeof body.apellido !== 'string'){
     return 'El apellido debe ser un string'
   }
-  if(body.nombre != undefined && typeof body.nombre !== 'string') {
+  if(body.nombre != undefined &&typeof body.nombre !== 'string' || body.nombre === null) {
       return 'el nombre debe ser un string'
   }
   if (!Object.keys(body).every(test)) {

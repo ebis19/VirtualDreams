@@ -6,17 +6,11 @@ Instalar dependencias
  npm install
 ```
 
-
-<<<<<<< HEAD
-=======
 ## Ejercicio 3
 
 
 ![ej3 punto 3](https://raw.githubusercontent.com/ebis19/VirtualDreams/main/VirtualDream-postman-get-2.png)
 
-
-
->>>>>>> fcdcc89fd465bcdc96a723fa003a16658dd455f8
 ## Ejercicio 4
 
  Iniciar script:

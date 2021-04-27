@@ -9,7 +9,9 @@ Instalar dependencias
 ## Ejercicio 3
 
 
-![ej3 punto 3](https://raw.githubusercontent.com/ebis19/VirtualDreams/main/VirtualDream-postman-get-2.png)
+![ej3 punto 1](https://raw.githubusercontent.com/ebis19/VirtualDreams/main/ScreenShot/VirtualDream-postman-get-1.png)
+![ej3 punto 2](https://raw.githubusercontent.com/ebis19/VirtualDreams/main/ScreenShot/VirtualDream-postman-post.png)
+![ej3 punto 3](https://raw.githubusercontent.com/ebis19/VirtualDreams/main/ScreenShot/VirtualDream-postman-get-2.png)
 
 ## Ejercicio 4
 

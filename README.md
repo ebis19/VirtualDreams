@@ -76,8 +76,7 @@
 
 10. El estandar rest o Representational state transfer se define como arquitectura al igual que la anterior donde indica cómo realizar el intercambio y manejo de datos a través de servicios. pero en este caso solo con el protocolo http. En este arquitectura se utiliza las diferentes verbos http, get(opbtener), put(actualizar),post(agregar),delete(eliminar) para las acciones. y los uri para identificar los recursos usando normalmente sustantivos.
 
-11.  los headers es utilizado en request para brindar mas informacion como datos del navegador y sistema operativo con header User-Agent.Ej
-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0. Tambien para autenticacion , el lenguaje usado ,coookies etc.
+11.  Los headers es utilizado en el request para brindar mas informacion para que la solicitud sea procesada correctamente como datos del navegador y sistema operativo.Por ejemplo el header User-Agent. Algo muy util cuando se trabaja con diferentes plataformas como computadoras,celulares. Los header tambien son utiles para autenticacion, el idioma usado,coookies,etc.
 El header Content-type es utilizado para indicar el mime type de los datos que se va enviar mejor dicho que tipo de recurso es ya sea texto plano(text/plain), un json(application/json; charset=utf-8), sonido (audio/mpeg),image, etc.
 
 

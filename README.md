@@ -19,7 +19,7 @@
 1. Un servidor http es un sofware encargado de gestionar las solicitudes en el protocolo http.
 2. Los  verbos mas conocidos son get(obtener), put(actualizar),post(agregar),delete(eliminar).
 3. El request en una comunicación de http es la solitud de informacion que se le hace al servidor http mientras que el response es la respuesta del mismo.
-4. Es la parte de una URL que contiene los datos. Por ejemplo en la url <http://localhost/persona/dni=123456552&apellido>="ejemplo", la porcion de la direccion dni=123456552&apellido="ejemplo" seria la queryString.
+4. Es la parte de una URL que contiene los datos. Por ejemplo en la url <http://localhost/persona/dni=123456552&apellido="ejemplo">, la porcion de la direccion <dni=123456552&apellido="ejemplo"> seria la queryString.
 5. El responseCode son códigos que devuelve el servidor para indica como se  proceso la solicitud. Dependiendo el rango de de numeros que se encuentre tiene diferentes utilidades.
  En el rango entre 200 y 299 que indica que se ejecuto la respuesta satisfactoriamente.Ej 200 que informa que el request se ejecuto correctamente. Y el 201 que informa que se guardo un nuevo dato.
  En el rango entre 400 y 499 que indican un error en el cliente. Como el clásico error 403 donde no encuentra la acción indicada .
@@ -72,12 +72,12 @@
  }]
  ```
 
-9. El estandar soap define procesos para el intercambio de informacion bajo el proocolo tcp por lo tanto puede ser extensible a http, smtp , entre otros. El funcionamiento del mismo se basa en de mensajes en estruras de datos xml.El mismo tiene varias partes definidas envelope donde se indentifica el mensaje, el header donde se indica como de debe ser procesado, y el body donde contiene la informacion.
+9. El estandar soap define un protocolo para el intercambio de informacion entre diferntes procesos bajo el protocolo tcp por lo tanto puede ser extensible a http, smtp , entre otros. El funcionamiento del mismo se basa en de mensajes en estruras de datos xml.El mismo tiene varias partes definidas envelope donde se indentifica el mensaje, el header donde se indica como de debe ser procesado, y el body donde contiene la informacion.
 
 10. El estandar rest o Representational state transfer se define como arquitectura al igual que la anterior donde indica cómo realizar el intercambio y manejo de datos a través de servicios. pero en este caso solo con el protocolo http. En este arquitectura se utiliza las diferentes verbos http, get(opbtener), put(actualizar),post(agregar),delete(eliminar) para las acciones. y los uri para identificar los recursos usando normalmente sustantivos.
 
 11.  los headers es utilizado en request para brindar mas informacion como datos del navegador y sistema operativo con header User-Agent.Ej
-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0.
+User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0. Tambien para autenticacion , el lenguaje usado ,coookies etc.
 el header Content-type es utilizado para indicar el mime type de los datos que se va enviar mejor dicho que tipo de recurso es ya sea texto plano(text/plain), un json(application/json; charset=utf-8), sonido (audio/mpeg),image, etc.
 
 

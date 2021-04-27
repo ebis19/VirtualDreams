@@ -19,9 +19,9 @@
 1. Un servidor http es un sofware encargado de gestionar las solicitudes en el protocolo http.
 2. Los  verbos mas conocidos son get(obtener), put(actualizar),post(agregar),delete(eliminar).
 3. El request en una comunicación de http es la solitud de informacion que se le hace al servidor http mientras que el response es la respuesta del mismo.
-4. Es la parte de una URL que contiene los datos. Por ejemplo en la url <http://localhost/persona/dni=123456552&apellido>="ejemplo", la porcion dni=123456552&apellido="ejemplo" seria la queryString.
+4. Es la parte de una URL que contiene los datos. Por ejemplo en la url <http://localhost/persona/dni=123456552&apellido>="ejemplo", la porcion de la direccion dni=123456552&apellido="ejemplo" seria la queryString.
 5. El responseCode son códigos que devuelve el servidor para indica como se  proceso la solicitud. Dependiendo el rango de de numeros que se encuentre tiene diferentes utilidades.
- En el rango entre 200 y 299 que indica que se ejecuto la respuesta satisfactoriamente.Ej 200 que informa que el request se ejecuto    correctamente. Y el 201 que informa que se guardo un nuevo dato.
+ En el rango entre 200 y 299 que indica que se ejecuto la respuesta satisfactoriamente.Ej 200 que informa que el request se ejecuto correctamente. Y el 201 que informa que se guardo un nuevo dato.
  En el rango entre 400 y 499 que indican un error en el cliente. Como el clásico error 403 donde no encuentra la acción indicada .
  En el rango 500 y 599  indica  un  error un error en el servidor. como por ejemplo el codigo 500.
 6. La forma que  se envia los datos en el get es a traves del la url.Como por ejemplo <http://localhost/persona/dni/12345678> .En un post se indican los datos en la solicitud. Normalmente se utilza get para solicitud de algun recurso  y el post para el envio de formulario.

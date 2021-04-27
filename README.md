@@ -55,8 +55,8 @@
 
  ```json
  {
-   "dni":"123456"
-   "apellido":"apellido"
+   "dni":"123456",
+   "apellido":"apellido",
    "nombre":"nombre"
  }
 ```

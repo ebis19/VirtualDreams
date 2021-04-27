@@ -99,8 +99,7 @@ Instalar dependencias
 
 9. El estandar soap define procesos para el intercambio de informacion en los protocolos http,smtp, a travez de estruras de datos xml.
 
-10. El estandar rest o Representational state transfer se define como arquitectura al igual que la anterior donde indica cómo realizar el intercambio y manejo de datos a través de servicios. pero en este caso solo con el protocolo http. En este arquitectura se utiliza las diferentes verbos http, get(opbtener), put(actualizar),post(agregar),delete(eliminar) para las acciones. y los uri para identificar los recursos usando normalmente sustantivos. Por ejemplo :
-obtener informacion de un alumno.
+10. El estandar rest o Representational state transfer se define como arquitectura al igual que la anterior donde indica cómo realizar el intercambio y manejo de datos a través de servicios. pero en este caso solo con el protocolo http. En este arquitectura se utiliza las diferentes verbos http, get(opbtener), put(actualizar),post(agregar),delete(eliminar) para las acciones. y los uri para identificar los recursos usando normalmente sustantivos.
 
 11.  los headers es utilizado en request para brindar mas informacion como datos del navegador y sistema operativo con header User-Agent.Ej
 User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0.
